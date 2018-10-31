@@ -1,0 +1,18 @@
+
+function billingFunction(){
+    //   define elements
+      var same = document.getElementById("same");
+      var shippingName = document.getElementById("shippingName");
+      var shippingZip = document.getElementById("shippingZip");
+      var billingName = document.getElementById("billingName");
+      var billingZip = document.getElementById("billingZip");
+      // clear the input fields if its unchecked
+      if (!same.checked){
+        billingName.value = "";
+        billingZip.value ="";
+      } else {
+      // Copy Values  
+        billingName.value = shippingName.value;
+        billingZip.value = shippingZip.value;
+      }
+}
